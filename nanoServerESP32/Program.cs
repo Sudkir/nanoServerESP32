@@ -2,6 +2,7 @@ using nanoServerESP32.WifiESP;
 using System;
 using System.Device.Gpio;
 using System.Diagnostics;
+using System.IO;
 using System.Threading;
 
 namespace nanoServerESP32
@@ -16,9 +17,18 @@ namespace nanoServerESP32
             // ESP32 DevKit: 4 is a valid GPIO pin in, some boards 
             // like Xiuxin ESP32 may require GPIO Pin 2 instead.
 
-            WiFiWLAN wifi = new();
+            // WiFiWLAN wifi = new();
 
-            wifi.Connect();
+            // wifi.Connect();
+
+
+
+
+            WiFiAP wifi = new();
+
+           
+
+
         }
     }
 }
