@@ -59,57 +59,40 @@ namespace nanoServerESP32.ServerESP
             switch (request.HttpMethod)
             {
                 case "GET":
-                    string[] url = request.RawUrl.Split('?');
-                    if (url[0] == "/favicon.ico")
-                    {
-                        response.ContentType = "image/png";
-                        //byte[] responseBytes = Resources.GetBytes(Resources.BinaryResources.favicon);
-                        byte[] responseBytes = null;
-                        OutPutByteResponse(response, responseBytes);
-                    }
-                    else
-                    {
+                response.ContentType = "text/json";
+                    Debug.WriteLine(request.RawUrl);
 
-                        try
-                        {
-
-                            //response.ContentType = "text/html";
-                            //var sd = File.Exists(@"..\ServerESP\main.html");
-                            //var fileContents = @"..\ServerESP\main.html";
-                            //// StreamReader
-                            //FileStream fs2 = new FileStream(fileContents, FileMode.Open, FileAccess.Read);
-                            //byte[] fileContent = new byte[fs2.Length];
-                            //fs2.Read(fileContent, 0, (int)fs2.Length);
-                            //var page = System.Text.Encoding.UTF8.GetString(fileContent, 0, fileContent.Length);
-
-
-                            //var s = "C:\Users\sudarikov\source\repos\nanoServerESP32\nanoServerESP32\ServerESP\main.html";
-                            responseString = ReplaceMessage(Resources.GetString(Resources.StringResources.page), "");
-                            OutPutResponse(response, responseString);
-                        }
-                        catch (Exception ex)
-                        {
-
-                            Debug.WriteLine(ex.Message);
-                        }
-
-                    }
-                    break;
+                    responseString = CreateMainPage("");
+                    OutPutResponse(response, responseString);
+ 
+                break;
 
                 case "POST":
-                    // Pick up POST parameters from Input Stream
-                    Hashtable hashPars = ParseParamsFromStream(request.InputStream);
-                    ssid = (string)hashPars["ssid"];
-                    password = (string)hashPars["password"];
 
-                    Debug.WriteLine($"Wireless parameters SSID:{ssid} PASSWORD:{password}");
+                    try
+                    {
+                        // Pick up POST parameters from Input Stream
+                        Hashtable hashPars = ParseParamsFromStream(request.InputStream);
+                        ssid = (string)hashPars["ssid"];
+                        password = (string)hashPars["password"];
 
-                    string message = "<p>New settings saved.</p><p>Rebooting device to put into normal mode</p>";
+                        Debug.WriteLine($"Wireless parameters SSID:{ssid} PASSWORD:{password}");
 
-                    responseString = CreateMainPage(message);
+                        string message = "<p>New settings saved.</p><p>Rebooting device to put into normal mode</p>";
 
-                    OutPutResponse(response, responseString);
-                    isApSet = true;
+                        responseString = CreateMainPage(message);
+
+                        OutPutResponse(response, responseString);
+                        isApSet = true;
+                    }
+                    catch (Exception ex)
+                    {
+
+                        Debug.WriteLine(ex.Message);
+
+                    }
+
+                   
                     break;
             }
 
