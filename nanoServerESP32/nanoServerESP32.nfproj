@@ -22,32 +22,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServerESP\Controllers\GetInfoController.cs" />
     <Compile Include="ServerESP\MainServer.cs" />
-    <Compile Include="ServerESP\StartServer.cs" />
+    <Compile Include="ServerESP\WebServerWLAN.cs" />
     <Compile Include="ServerESP\WebServerAP.cs" />
-    <Compile Include="WifiESP\WiFiAP.cs" />
-    <Compile Include="WifiESP\WiFiWLAN.cs" />
-    <Compile Include="WifiESP\WifiInstance.cs" />
+    <Compile Include="WifiESP\WirelessMain.cs" />
+    <Compile Include="Core\SensorInstance.cs" />
     <Compile Include="WifiESP\Wireless80211.cs" />
     <Compile Include="WifiESP\WirelessAP.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Iot.Device.DhcpServer, Version=1.2.0.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Iot.Device.DhcpServer.1.2.174\lib\Iot.Device.DhcpServer.dll</HintPath>
+      <HintPath>..\packages\nanoFramework.Iot.Device.DhcpServer.1.2.268\lib\Iot.Device.DhcpServer.dll</HintPath>
       <Private>True</Private>
       <SpecificVersion>True</SpecificVersion>
     </Reference>
     <Reference Include="mscorlib, Version=1.14.3.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
       <HintPath>..\packages\nanoFramework.CoreLibrary.1.14.2\lib\mscorlib.dll</HintPath>
-      <Private>True</Private>
-      <SpecificVersion>True</SpecificVersion>
-    </Reference>
-    <Reference Include="nanoFramework.Hardware.Esp32, Version=1.6.3.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.Hardware.Esp32.1.6.3\lib\nanoFramework.Hardware.Esp32.dll</HintPath>
-      <Private>True</Private>
-      <SpecificVersion>True</SpecificVersion>
-    </Reference>
-    <Reference Include="nanoFramework.ResourceManager, Version=1.2.13.0, Culture=neutral, PublicKeyToken=c07d481e9758c731">
-      <HintPath>..\packages\nanoFramework.ResourceManager.1.2.13\lib\nanoFramework.ResourceManager.dll</HintPath>
       <Private>True</Private>
       <SpecificVersion>True</SpecificVersion>
     </Reference>

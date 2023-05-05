@@ -5,8 +5,7 @@ using System.Collections;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
-using System.Resources;
-using System.Text;
+
 using System.Threading;
 
 
@@ -59,19 +58,25 @@ namespace nanoServerESP32.ServerESP
             switch (request.HttpMethod)
             {
                 case "GET":
-                response.ContentType = "text/json";
+                response.ContentType = "text/html";
                     Debug.WriteLine(request.RawUrl);
-
+                    // /ssid=1/passwor=1/
+                    if (request.RawUrl.Contains("ssid") && request.RawUrl.Contains("password"))
+                    {
+                        var pars = request.RawUrl.Split(new char[] { '/', '=' });
+                        ssid = pars[2];
+                        password = pars[4];
+                        isApSet = true;
+                    }
                     responseString = CreateMainPage("");
                     OutPutResponse(response, responseString);
- 
-                break;
+                 
+                    break;
 
                 case "POST":
 
                     try
                     {
-                        // Pick up POST parameters from Input Stream
                         Hashtable hashPars = ParseParamsFromStream(request.InputStream);
                         ssid = (string)hashPars["ssid"];
                         password = (string)hashPars["password"];
@@ -84,6 +89,7 @@ namespace nanoServerESP32.ServerESP
 
                         OutPutResponse(response, responseString);
                         isApSet = true;
+                        break;
                     }
                     catch (Exception ex)
                     {
@@ -91,8 +97,6 @@ namespace nanoServerESP32.ServerESP
                         Debug.WriteLine(ex.Message);
 
                     }
-
-                   
                     break;
             }
 
@@ -108,6 +112,7 @@ namespace nanoServerESP32.ServerESP
                 Thread.Sleep(200);
                 Power.RebootDevice();
             }
+
         }
 
         static string ReplaceMessage(string page, string message)

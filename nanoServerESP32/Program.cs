@@ -13,7 +13,9 @@ namespace nanoServerESP32
         
         public static void Main()
         {
+            Debug.WriteLine("START ESP by KARL");
             s_GpioController = new GpioController();
+            
             // ESP32 DevKit: 4 is a valid GPIO pin in, some boards 
             // like Xiuxin ESP32 may require GPIO Pin 2 instead.
 
@@ -21,10 +23,10 @@ namespace nanoServerESP32
 
             // wifi.Connect();
 
+            //Wireless80211.Configure("9164058067", "9164058067");
 
 
-
-            WiFiAP wifi = new();
+          //  WirelessMain wifi = new();
 
            
 
