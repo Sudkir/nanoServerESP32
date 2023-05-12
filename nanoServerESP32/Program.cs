@@ -1,3 +1,6 @@
+using nanoFramework.Networking;
+using nanoServerESP32.GpioCore;
+using nanoServerESP32.ServerESP;
 using nanoServerESP32.WifiESP;
 using System;
 using System.Device.Gpio;
@@ -9,28 +12,27 @@ namespace nanoServerESP32
 {
     public class Program
     {
-        private static GpioController s_GpioController;
-        
         public static void Main()
         {
             Debug.WriteLine("START ESP by KARL");
-            s_GpioController = new GpioController();
-            
-            // ESP32 DevKit: 4 is a valid GPIO pin in, some boards 
-            // like Xiuxin ESP32 may require GPIO Pin 2 instead.
 
-            // WiFiWLAN wifi = new();
+            PinManagement.InitPinManagement();
 
-            // wifi.Connect();
+            //WirelessMain wifi = new();
+            if (WifiNetworkHelper.ConnectDhcp("9164058067", "9164058067", token: new CancellationTokenSource(10000).Token))
+            {
 
-            //Wireless80211.Configure("9164058067", "9164058067");
+                Debug.WriteLine($"We have a valid date: {DateTime.UtcNow}");
+                //Start WebServerWLAN
+                WebServerWLAN serverWLAN = new WebServerWLAN();
 
+            }
+            else
+            {
+                Debug.WriteLine($"ERROR 404");
+            }
 
-          //  WirelessMain wifi = new();
-
-           
-
-
+            Thread.Sleep(Timeout.Infinite);
         }
     }
 }

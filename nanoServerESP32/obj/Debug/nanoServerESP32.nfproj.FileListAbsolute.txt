@@ -135,7 +135,6 @@ C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\obj\Debug\na
 C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\obj\Debug\nanoServerESP32.nfproj.CoreCompileInputs.cache
 C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\bin\Debug\nanoServerESP32.exe
 C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\bin\Debug\nanoServerESP32.pdbx
-C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\bin\Debug\nanoServerESP32.bin
 C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\bin\Debug\nanoServerESP32.pdb
 C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\bin\Debug\nanoServerESP32.pe
 C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\bin\Debug\Iot.Device.DhcpServer.pe
@@ -206,8 +205,6 @@ C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\bin\Debug\Sy
 C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\bin\Debug\System.Threading.xml
 C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\bin\Debug\Windows.Storage.xml
 C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\bin\Debug\Windows.Storage.Streams.xml
-C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\obj\Debug\nanoServerESP32.pe
-C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\obj\Debug\nanoServerESP32.pdbx
 C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\obj\Debug\nanoServerESP32.nfproj.CopyComplete
 C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\obj\Debug\Iot.Device.DhcpServer.dll
 C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\obj\Debug\mscorlib.dll
@@ -243,3 +240,18 @@ C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\obj\Debug\Sy
 C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\obj\Debug\System.Threading.xml
 C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\obj\Debug\Windows.Storage.xml
 C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\obj\Debug\Windows.Storage.Streams.xml
+C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\bin\Debug\nanoServerESP32.bin
+C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\obj\Debug\nanoServerESP32.pe
+C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\obj\Debug\nanoServerESP32.pdbx
+C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\bin\Debug\nanoFramework.Hardware.Esp32.pe
+C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\bin\Debug\nanoFramework.Hardware.Esp32.Rmt.pe
+C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\bin\Debug\nanoFramework.Hardware.Esp32.pdbx
+C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\bin\Debug\nanoFramework.Hardware.Esp32.Rmt.pdbx
+C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\bin\Debug\nanoFramework.Hardware.Esp32.dll
+C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\bin\Debug\nanoFramework.Hardware.Esp32.Rmt.dll
+C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\bin\Debug\nanoFramework.Hardware.Esp32.xml
+C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\bin\Debug\nanoFramework.Hardware.Esp32.Rmt.xml
+C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\obj\Debug\nanoFramework.Hardware.Esp32.dll
+C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\obj\Debug\nanoFramework.Hardware.Esp32.Rmt.dll
+C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\obj\Debug\nanoFramework.Hardware.Esp32.xml
+C:\Users\sudarikov\Documents\GitHub\nanoServerESP32\nanoServerESP32\obj\Debug\nanoFramework.Hardware.Esp32.Rmt.xml
